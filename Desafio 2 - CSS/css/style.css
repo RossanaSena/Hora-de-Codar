@@ -1,0 +1,41 @@
+body {
+    padding-bottom: 500px;
+}
+
+/* titulo */
+h1 {
+    color: darkmagenta;
+}
+
+h4 {
+    color: darkblue;
+}
+
+/* classes */
+.paragrafo {
+    background-color: black;
+    color: aqua;
+    padding: 5px;
+}
+
+/* ids */
+#titulo-exclusivo {
+    background-color: purple;
+    color: darkorange;
+    padding: 5px;
+    font-size: 40px;
+}
+
+/* ordem das regras */
+
+h2 {
+    border-bottom: 2px solid red;
+}
+
+.titulo {
+    border-bottom: 3px solid blue;
+}
+
+#algum-titulo {
+    border-bottom: 4px solid green;
+}
