@@ -7,22 +7,51 @@
     <title>Formulários</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
+  <!-- Forms: 
+    Recebem dados dos usuários e enviam para um servidor
+    Serve também para validar dados. 
+    Tags mais usadas: form, label e input.
+      form: é para criar e delimitar o formulário.
+      label: descreve os inputs.
+      input: onde colocamos os dados. Pode ser: text, number, email, submit e outros.
+  -->
   <body>
     <h2>Formulários HTML</h2>
-    <!-- 1 - Primeiro formulario -->
-    <!-- 2 - Atributos do formulário -->
+    <!-- 1 - primeiro formulário 
+      começa com a tag Form, para definir onde começa e termina o formulário. Dentro da Form, colocamos a tag label e depois a tag input. 
+      Podemos colocar as tags divs dentro do form também. A tag de input tem o atributo "type", que define o propósito para o input. O input do tipo text, é para texto e o mais utilizado.
+    -->
+    <!-- 2 - atributos da tag form 
+      Geralmente, tem dois atributos: action e method
+        Action: o arquivo / página que os dados serão enviados após clicar em enviar/ submeter...
+        Method: GET (recebe dados) ou POST (envia dados)
+      Esses atributos trabalham diretamente com o banco de dados, então é Back-End.
+    -->
     <form action="register.php" method="GET">
       <div>
         <label>Nome:</label>
-        <input type="text" />
+        <input type="text" />  <!--esse input está sem o atributo name--> 
       </div>
-      <!-- 3 - atributo name -->
+      <!-- 3 - atributo name no input
+        Usado para configurar os inputs.
+        O valor do name é ligado ao propósito. Ex.: Se o input recebe a idade de um usuário, o valor do name pode ser age (ou idade)
+        O atributo name é utilizado em Back-End, então, o Back-End pega o valor do atributo e envia para o servidor 
+      -->
       <div>
-        <!-- 4 - atributo label -->
+        <!-- 4 - atributo label 
+          Tem apenas o atributo for, que liga a descrição da label ao input. 
+          A regra é: o atributo for tem o mesmo valor que o atributo name que está no input referente àquela label.
+          O for é semântico, com isso, ajuda a melhorar o ranking no Google.
+        -->
         <label for="age">Idade:</label>
-        <input type="text" name="age" />
+        <input type="text" name="age" /> <!--esse input tem o atributo name--> 
       </div>
-      <!-- 6 - select -->
+      <!-- 6 - select 
+        é um input específico, e por isso colocamos como tag select (<select> </select>)
+        e dentro dele, tem a teg options, e isso permite que seja escolhido alguma opção.
+        o atributo name é definido na tag select e é o mesmo que usa no atributo for, que fica na tag label
+        o atributo value é definido nas tags options e usado pelo Back-End
+      -->
       <div>
         <label for="job">Selecione a sua profissão:</label>
         <select name="job">
@@ -31,7 +60,8 @@
           <option value="devops">DevOps</option>
         </select>
       </div>
-      <!-- 7 - atributo selected -->
+      <!-- 7 - atributo selected 
+        fica dentro de selected, mas colocamos nas tags option para já deixar selecionada uma opção-->
       <div>
         <label for="contract">Você leu os termos do contrato?</label>
         <select name="contract">
@@ -39,22 +69,31 @@
           <option value="nao" selected>Não</option>  
         <select>
       </div>
-      <!-- 8 - multiplas opções -->
+      <!-- 8 - multiplas opções 
+        possibilita selecionar uma ou mais de uma opção por vez
+        para isso, colocamos o atributo multiple na tag select
+      -->
       <div>
         <label for="items">Selecione os itens desejados:</label>
         <select name="items" multiple>
           <option value="pera">Pera</option>
           <option value="maçã">Maçã</option>
-          <option value="banana">Banana</option>
+          <option value="banana">Banana</option>  
           <option value="uva">Uva</option>
         </select>
       </div>
-      <!-- 9 - textarea -->
+      <!-- 9 - tag textarea 
+        semelhante a tag input com type text, mas podemos colocar textos maiores.      
+      -->
       <div>
         <label for="comment">Escreva abaixo o que você achou do post:</label>
         <textarea name="comment"></textarea>
       </div>
-      <!-- 10 - fieldset e legend -->
+      <!-- 10 - tag fieldset e tag legend 
+        fieldset é para agrupar os inputs igual o form, mas tem mais semântica porque agrupa os inputs que se relacionam
+        legend tem a mesma função do label, mas descreve inputs que foram agrupados pelo fieldset
+        usa fieldset e legend quando quer agrupar inputs que tem o mesmo sentido, ex.: nome e sobrenome
+      -->
       <div>
         <fieldset>
           <legend>Preencha as suas informações:</legend>
@@ -64,7 +103,15 @@
           <input type="text" name="lastname">
         </fieldset>
       </div>
-      <!-- 11 - datalist -->
+      <!-- 11 - datalist 
+        Faz a função do select, mas tem o autocomplete
+        permite pesquisar possíveis valores para preencher o input com o autocomplete
+        ou
+        seleciona alguma opção por meio de uma lista
+        e, para fazer o link da datalist com o input, coloco o atributo list com o valor sendo o mesmo valor definido para o id da datalist. 
+        ex.: flavors (plural)  
+        As options da datalist tem o value, e o que escrevo como value já aparece para quem usar o sistema e também serão utilizadas pelo Back-End
+      -->
       <div>
         <label for="flavor">Escolha o sabor:</label>
         <input type="text" list="flavors" name="flavor">
@@ -167,7 +214,11 @@
 
       <!-- 13 - resetar form -->
       <input type="reset" value="Limpar">
-      <!-- 5 - envio de form -->
+      <!-- 5 - envio de form 
+        Botão tamém é um input. 
+        O que muda é o type que ao invés de text, é o submit.
+        Podemos deixar sem definir, mas é mais adequado definir o value como "enviar" ou "cadastrar". 
+      -->
       <input type="submit" value="Enviar" />
     </form>
   </body>
