@@ -124,13 +124,22 @@
         </datalist>
       </div>
 
-      <!-- 12 - Senha -->
+      <!-- 12 - Senha 
+        usamos a tag input e no type colocamos password, assim quando digitar a senha, ficará um * e não a senha
+      -->
       <div>
         <label for="password">Digite a sua senha:</label>
         <input type="password" name="password">
       </div>
 
-      <!-- 14 - radio button -->
+      <!-- 14 - radio button 
+        Geralmente, tem mais de um, igual ao checkbox
+        no input, coloca o type radio
+        assim, mostra todas as opções, mas PODERÁ SELECIONAR APENAS UMA OPÇÃO
+        cria uma div, dentro dela cria a descrição principal dos botões de opção
+        depois, cira os botões de seleção com input e a descrição de cada um com a (label). Os inputs tem o mesmo nome da label inicial, o que irá mudar são os valores (value) de cada um, o value é usado pelo Back-End. O for (ex.:bmw) da label é igual ao value do input type radio daquela label.
+        E no CSS, coloca os radio label, radio inut e radio span com o diplay inline-block para ficar o input primeiro e ao lado dele fica a label. Então, o texto fica a direita do botão. 
+      -->
       <div>
         <label for="car_model">Escolha o modelo do seu carro:</label>
         <div class="radio">
@@ -147,7 +156,13 @@
         </div>
       </div>
 
-      <!-- 15 - checkbox -->
+      <!-- 15 - checkbox
+        Geralmente, tem mais de um, igual ao radio button
+        É similar ao radio, mas é possível marcar mais de uma opção e desmarcar caso precise
+        mostra todas as opções, e PODERÁ SELECIONAR QUANTAS OPÇÕES QUISER"
+        a div secundária tem a class radio para ter a mesma estilização que foi feita para o radio button
+        o input tem o type checkbox e o name tem os colchetes para enviar mais de uma opção, chamamos de anotação de array (listas). Mudo apenas os value e os for de cada um
+      -->
       <div>
         <label for="optionals">Opcionais do carro:</label>
         <div class="radio">
@@ -212,7 +227,9 @@
         <input type="text" placeholder="Digite o ano em que você nasceu" required>
       </div>
 
-      <!-- 13 - resetar form -->
+      <!-- 13 - resetar form 
+        usa a tag input e o type será reset
+      -->
       <input type="reset" value="Limpar">
       <!-- 5 - envio de form 
         Botão tamém é um input. 
