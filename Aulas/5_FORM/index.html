@@ -179,49 +179,80 @@
         </div>
       </div>
 
-      <!-- 16 - datas -->
+      <!-- 16 - datas
+        colocar no input o type date
+        Seleciona data
+        tem calendário com datas passadas e futuras de forma visual
+        podemos preencher digitando
+      -->
       <div>
         <label for="birthday">Data de nascimento:</label>
         <input type="date" name="birthday">
       </div>
 
-      <!-- 17 - arquivos -->
+      <!-- 17 - arquivos 
+      input com o type file
+      envia arquivos ao servidor
+      -->
       <div>
         <label for="image">Insira a sua imagem:</label>
         <input type="file" name="image">
       </div>
 
-      <!-- 18 - numeros -->
+      <!-- 18 - numeros 
+      input com type number
+      aceita apenas dígitos
+      setas podem ser usadas para alterar os números
+      decimais usa ponto - padrão norte-americano
+      -->
       <div>
         <label for="salary">Quanto você ganha no seu emprego atual?</label>
         <input type="number" name="salary">
       </div>
 
-      <!-- 19 - emails -->
+      <!-- 19 - emails 
+      input com type email valida se o texto é e-mail a partir da inserção @, do domínio
+      -->
       <div>
         <label for="email">Digite o seu e-mail:</label>
         <input type="email" name="email">
       </div>
 
-      <!-- 20 - value -->
+      <!-- 20 - value
+      define um valor padrão value para o input alvo
+      facilita para a pessoa que usa o sistema
+      ou mostrar dados de edição
+      -->
       <div>
         <label for="value">Digite algum valor:</label>
         <input type="text" value="O meu valor é este 2" name="value">
       </div>
 
-      <!-- 21 - disabled -->
+      <!-- 21 - disabled 
+      bloqueia a digitação no input quando não precisa mais das respostas
+      no input coloco um value e defino como disabled
+      esse value será ignorado quando enviado para Back-End, porque tem o disabel
+      -->
       <div>
         <p>Tente mudar o valor:</p>
         <input type="text" value="Não precisa preencher" disabled>
       </div>
 
-      <!-- 22 - placeholder -->
+      <!-- 22 - placeholder 
+      coloco no input o type, name e o placeholder 
+      são dicas para o usuários
+      podemos colocar exemplos / dicas/ orientações de como deve ser a digitação
+      -->
       <div>
         <label for="currentjob">Digite a sua profissão:</label>
         <input type="text" name="currentjob" placeholder="No que você está trabalhando agora?">
       </div>
 
-      <!-- 23 - required -->
+      <!-- 23 - required 
+      no input colocamos o type, pode colocar o placeholder e depois o required
+      é ao usar o required torna um campo como obrigatório
+      tipo de validação HTML para campos obrigatórios
+      -->
       <div>
         <label for="birthyear">Ano nascimento:</label>
         <input type="text" placeholder="Digite o ano em que você nasceu" required>
