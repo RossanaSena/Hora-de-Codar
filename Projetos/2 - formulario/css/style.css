@@ -2,24 +2,45 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Baskervville', serif;
+}
+
+:root {
+    /* background-color */
+    --body:#F0EBF8;
+    --primary-color:#FDFDFD;
+    --secundary-color: #FFF;
+
+    /* text color */
+    --title: #333;
+    --secundary-text: #444;
+    
+    /* color text and details */
+    --main-color:#ca5c26;
+
+    /* border color */
+    --primary-border: #CCC;
+    --secundary-border:#DFDFDF;
+
+    /* details */
+    --required-field: #D80835;
 }
 
 body {
-    background-color: #F0EBF8;
+    background-color: var(--body);
 }
 
 h1, h2, h3, h4, h5 {
-    color: #333;
+    color: var(--title);
 }
 
 p, label {
-    color: #444;
+    color:var(--secundary-text);
 }
 
 input {
     border: none;
-    border-bottom: 1px solid #CCC;
+    border-bottom: 1px solid var(--primary-border);
     padding: 10px 0;
 }
 
@@ -39,17 +60,21 @@ textarea {
 .header {
     height: 160px;
     padding: 20px;
-    background-color: #673AB7;
+    background-color: var(--main-color);
+    background-image: url(../img/car_sale.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 15%;
 }
 
 .header h3 {
-    color: #FFF;
+    color: var(--secundary-color);
     margin-top: 0;
 }
 
 /* form container */    
 .form-container {
-    background-color: #FDFDFD;
+    background-color: var(--primary-color);
     width: 60%;
     margin: 0 auto;
     position: relative;
@@ -58,14 +83,14 @@ textarea {
 
 /* form header */
 .form-header {
-    border-bottom: 1px solid #DFDFDF;
+    border-bottom: 1px solid var(--secundary-border);
     height: 45px; 
 }
 
 .form-header p {
-    color: #673AB7;
-    border-bottom: 2px solid #673AB7;
-    width: 100px;
+    color: var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+    width: 150px;
     text-align: center;
     margin: 0 auto;
     text-transform: uppercase;
@@ -87,7 +112,7 @@ textarea {
 }
 
 .required-field {
-    color: #D80835;
+    color: var(--required-field);
 }
 
 .box-input {
@@ -113,8 +138,8 @@ textarea {
 }
 
 .btn-submit {
-    background-color: #673AB7;
-    color: #FFF;
+    background-color: var(--main-color);
+    color: var(--secundary-color);
     border: 2px solid transparent;
     width: 150px;
     height: 50px;
@@ -124,7 +149,7 @@ textarea {
 }
 
 .btn-submit:hover {
-    background-color: #FFF;
-    border-color: #673AB7;
-    color: #673AB7;
+    background-color: var(--secundary-color) ;
+    border-color: var(--main-color);
+    color: var(--main-color);
 }
