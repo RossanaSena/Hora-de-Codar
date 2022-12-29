@@ -15,9 +15,11 @@
     --default-btn: #2CC76A;
     --default-btn-hover: #22BB5F;
     --default-btn-hover-text: #000;
-}   
+}
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: var(--title);
 }
 
@@ -76,4 +78,28 @@ p {
 .navbar-items .default-btn:hover {
     background-color: var(--default-btn);
     color: var(--default-btn-hover-text);
+}
+
+/* main banner */
+.main-banner {
+    background-image: url("../img/mainbanner.png");
+    padding: 10rem 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.main-banner h1,
+.main-banner p {
+    color: var(--navbar-a);
+    text-align: center;
+    font-weight: bold;
+    text-shadow: var(--default-btn-hover-text) 3px 2px 3px;
+}
+
+.main-banner h1 {
+    font-size: 54px;
+}
+
+.main-banner p {
+    font-size: 32px;
 }
