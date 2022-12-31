@@ -35,7 +35,7 @@ p {
 
 .navbar-items {
     position: absolute;
-    right: 0;
+    right: 25px;
     height: 80px;
     line-height: 80px;
     margin: 0;
@@ -303,4 +303,118 @@ footer {
     text-align: center;
     font-weight: bold;
     margin: 20px 0 100px;
+}
+
+/* responsividade */
+
+/* 1 - small laptops (a partir de 1100px) */
+
+@media (max-width: 1100px) {
+
+    .plans-container {
+        width: 95%;
+    }
+
+    .plan {
+        margin: 0 5px;
+    }
+}
+
+ /* 2 - tablet (até 900px) */
+ 
+ @media (max-width: 900px) {
+     .main-banner {
+        font-size: 32px;
+        padding: 0 6rem;
+    }
+
+    .searchdomain-container {
+        padding: 2rem 4rem;
+    }
+}
+
+/* 3 - celular (até 576px) */
+
+@media (max-width: 576px) {
+    html, body {
+        overflow-x: hidden;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    .navbar-items {
+        font-size: 11px;
+        margin-left: 3rem;
+    }
+
+    .navbar-items li {
+        margin-left: .5rem;
+    }
+
+    .main-banner {
+        padding: 45% 0;
+    }
+    
+    .main-banner h1 {
+        font-size: 50px;
+        margin-bottom: 1rem;
+    }
+    
+    .main-banner p {
+        padding: 0 1rem;
+        font-size: 20px;
+    }
+
+    .services-container {
+        padding: 3rem 0;
+    }   
+
+    .services-container ul {
+        flex-direction: column;
+    }
+
+    .plans-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .plan {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .plan ul {
+        margin-top: 1rem;
+    }
+
+    .searchdomain-container h2 {
+        font-size: 30px;
+    }
+
+    .searchdomain-container p {
+        font-size: 20px;
+    }
+
+    .searchdomain-container input[type="text"] {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .searchdomain-container input[type="submit"] {
+        padding: 12px 20px;
+        font-size: 20px;
+    }
+
+    .contact-container {
+        padding: 3rem 3rem;
+    }
+
+    .contact-container input,
+    .contact-container textarea {
+        width: 100%;
+        margin: 10px 0;
+    }
 }
